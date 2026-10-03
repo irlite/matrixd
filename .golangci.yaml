@@ -1,0 +1,47 @@
+version: "2"
+linters:
+  default: none
+  enable:
+    - errcheck
+    - govet
+    - staticcheck
+    - unused
+    - ineffassign
+    - revive
+    - lll
+  settings:
+    lll:
+      line-length: 80
+      tab-width: 4
+    staticcheck:
+      checks: ["all", "-ST1000"]
+    revive:
+      rules:
+        - name: exported
+        - name: package-comments
+        - name: var-naming
+        - name: var-declaration
+        - name: receiver-naming
+        - name: error-naming
+        - name: error-strings
+        - name: error-return
+        - name: indent-error-flow
+        - name: superfluous-else
+        - name: context-as-argument
+        - name: context-keys-type
+        - name: blank-imports
+        - name: dot-imports
+        - name: unexported-return
+        - name: increment-decrement
+        - name: unused-parameter
+        - name: range
+formatters:
+  enable:
+    - gofmt
+    - goimports
+    - golines
+  settings:
+    golines:
+      max-len: 80
+      tab-len: 4
+      shorten-comments: true
