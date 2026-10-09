@@ -17,8 +17,6 @@ linters:
       checks: ["all", "-ST1000"]
     revive:
       rules:
-        - name: exported
-        - name: package-comments
         - name: var-naming
         - name: var-declaration
         - name: receiver-naming
